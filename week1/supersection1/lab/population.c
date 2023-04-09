@@ -3,15 +3,24 @@
 
 int main(void)
 {
-  double starting, final, current, new, add_pop, new_pop;
-  
-  starting = 10;
-  final = 11;
+  float starting, final, current, new, birth_rate, death_rate, pop;
+  int y = 0;
 
   do
   {
-    add_pop = starting + (starting / 3);
-    new_pop = add_pop - (starting / 3);
-  } while (new_pop<final);
-  printf("%f\n", new_pop);
+    starting = get_float("Start Size: ");
+  } while (starting < 4);
+  do
+  {
+    final = get_float("End size: ");
+  } while (final < starting);
+
+  for (pop = starting; pop < final; pop = pop+new)
+  {
+    birth_rate = pop/3;
+    death_rate = pop/4;
+    new = (birth_rate - death_rate);
+    y++;
+  }
+  printf("Years: %i\n", y);
 }
