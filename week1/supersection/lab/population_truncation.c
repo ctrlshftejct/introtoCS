@@ -4,10 +4,10 @@
 int main(void)
 {
   // Prompting the user for a starting # of llamas
-  int start;
+  float start;
   do
   {
-    start = get_int("Start size: ");
+    start = get_float("Start size: ");
   } while (start < 9);
   
   // Prompting them for an ending # of llamas
