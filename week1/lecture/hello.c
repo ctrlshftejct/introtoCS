@@ -1,4 +1,3 @@
-
 /* header file, must include */
 #include <cs50.h>
 #include <stdio.h>
